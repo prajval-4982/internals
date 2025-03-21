@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mouse Events</title>
+    <style>
+        img {
+            width: 200px;
+            height: 200px;
+            transition: transform 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <h2>Mouse Events Example</h2>
+    <img id="eventImage" src="image1.jpg" 
+         onmouseover="changeImage()" 
+         onmouseout="resetImage()"
+         onmousedown="rotateImage()" 
+         onmouseup="resetRotation()">
+    
+    <script>
+        function changeImage() {
+            document.getElementById("eventImage").src = "image2.jpg";
+        }
+        function resetImage() {
+            document.getElementById("eventImage").src = "image1.jpg";
+        }
+        function rotateImage() {
+            document.getElementById("eventImage").style.transform = "rotate(45deg)";
+        }
+        function resetRotation() {
+            document.getElementById("eventImage").style.transform = "rotate(0deg)";
+        }
+    </script>
+</body>
+</html>

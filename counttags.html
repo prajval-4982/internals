@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Count h2 and h3</title>
+</head>
+<body>
+    <h2>Heading 1</h2>
+    <h2>Heading 2</h2>
+    <h3>Subheading 1</h3>
+    <h3>Subheading 2</h3>
+    <h3>Subheading 3</h3>
+    <button onclick="countTags()">Count h2 and h3</button>
+    <p id="tagCount"></p>
+
+    <script>
+        function countTags() {
+            let h2Count = document.getElementsByTagName("h2").length;
+            let h3Count = document.getElementsByTagName("h3").length;
+            document.getElementById("tagCount").innerHTML = "Total h2: " + h2Count + "<br>Total h3: " + h3Count;
+        }
+    </script>
+</body>
+</html>

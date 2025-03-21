@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Validation</title>
+</head>
+<body>
+    <h2>Form Validation</h2>
+    <form>
+        <label>Email:</label>
+        <input type="email" id="email" onchange="validateEmail()">
+        <span id="emailStatus"></span>
+        <br><br>
+
+        <label>Password:</label>
+        <input type="password" id="password" oninput="validatePassword()">
+        <span id="passwordStatus"></span>
+        <br><br>
+
+        <label>Phone Number (10 digits):</label>
+        <input type="text" id="phone" oninput="validatePhone()">
+        <span id="phoneStatus"></span>
+        <br><br>
+
+        <button type="submit" id="submitBtn" disabled>Submit</button>
+    </form>
+
+    <script>
+        function validateEmail() {
+            let email = document.getElementById("email").value;
+            let regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            document.getElementById("emailStatus").innerHTML = regex.test(email) ? "✅" : "❌";
+            checkForm();
+        }
+
+        function validatePassword() {
+            let password = document.getElementById("password").value;
+            let strong = password.length >= 8 && /\d/.test(password);
+            document.getElementById("passwordStatus").innerHTML = strong ? "Strong" : "Weak";
+            checkForm();
+        }
+
+        function validatePhone() {
+            let phone = document.getElementById("phone").value;
+            document.getElementById("phoneStatus").innerHTML = phone.length === 10 && !isNaN(phone) ? "✅" : "❌";
+            checkForm();
+        }
+
+        function checkForm() {
+            let emailValid = document.getElementById("emailStatus").innerHTML === "✅";
+            let passwordValid = document.getElementById("passwordStatus").innerHTML === "Strong";
+            let phoneValid = document.getElementById("phoneStatus").innerHTML === "✅";
+
+            document.getElementById("submitBtn").disabled = !(emailValid && passwordValid && phoneValid);
+        }
+    </script>
+</body>
+</html>

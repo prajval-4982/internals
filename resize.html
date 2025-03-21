@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resize Window</title>
+</head>
+<body>
+    <h2>Resize Window</h2>
+    <button onclick="resizeWindowTo()">Resize To (500x500)</button>
+    <button onclick="resizeWindowBy()">Resize By (100x100)</button>
+
+    <script>
+        function resizeWindowTo() {
+            window.resizeTo(500, 500);
+        }
+        function resizeWindowBy() {
+            window.resizeBy(100, 100);
+        }
+    </script>
+</body>
+</html>

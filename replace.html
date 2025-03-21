@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Replace Methods</title>
+</head>
+<body>
+    <h2>Replace Methods</h2>
+    <p id="replaceDemo"></p>
+
+    <script>
+        let sentence = "JavaScript is fun. JavaScript is powerful.";
+        let result = sentence.replace("JavaScript", "JS") + "<br>" + sentence.replaceAll("JavaScript", "JS");
+        document.getElementById("replaceDemo").innerHTML = result;
+    </script>
+</body>
+</html>

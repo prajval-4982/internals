@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Arithmetic Operations</title>
+</head>
+<body>
+    <h2>Arithmetic Operations</h2>
+    <input type="number" id="numA" placeholder="Enter first number">
+    <input type="number" id="numB" placeholder="Enter second number">
+    <button onclick="calculate('+')">Add</button>
+    <button onclick="calculate('-')">Subtract</button>
+    <button onclick="calculate('*')">Multiply</button>
+    <button onclick="calculate('/')">Divide</button>
+    <p id="operationResult"></p>
+
+    <script>
+        function calculate(op) {
+            let a = parseFloat(document.getElementById("numA").value);
+            let b = parseFloat(document.getElementById("numB").value);
+            let result;
+            switch (op) {
+                case '+': result = a + b; break;
+                case '-': result = a - b; break;
+                case '*': result = a * b; break;
+                case '/': result = (b !== 0) ? a / b : "Cannot divide by zero"; break;
+            }
+            document.getElementById("operationResult").innerText = "Result: " + result;
+        }
+    </script>
+</body>
+</html>

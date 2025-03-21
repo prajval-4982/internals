@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Arrays</title>
+</head>
+<body>
+    <script>
+        function arrayOperations() {
+            let arrLiteral = [10, 20, 30, 40, 50];
+            for (let i = 0; i < arrLiteral.length; i++) {
+                console.log(arrLiteral[i]);
+            }
+
+            let arrConstructor = new Array(5, 15, 25, 35, 45);
+            arrConstructor.forEach(num => console.log(num));
+
+            let fibArray = [0, 1];
+            for (let i = 2; i < 10; i++) {
+                fibArray[i] = fibArray[i - 1] + fibArray[i - 2];
+            }
+            fibArray.forEach(num => console.log(num));
+
+            let numbers = [5, 10, 15, 20, 25];
+            let sum = 0;
+            numbers.forEach(num => sum += num);
+            console.log(sum);
+
+            let sourceArray = [1, 2, 3, 4, 5];
+            let destinationArray = [];
+            sourceArray.forEach(num => destinationArray.push(num));
+            console.log(destinationArray);
+
+            let fruits = ["Apple", "Banana", "Mango", "Cherry"];
+            console.log(fruits.join(", "));
+            console.log(fruits.reverse());
+            console.log(fruits.sort());
+
+            let moreFruits = ["Pineapple", "Grapes"];
+            console.log(fruits.concat(moreFruits));
+        }
+
+        arrayOperations();
+    </script>
+</body>
+</html>

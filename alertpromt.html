@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Alerts, Prompts, and Confirms</title>
+</head>
+<body>
+    <h2>Alert, Prompt, and Confirm Example</h2>
+    <p id="greeting"></p>
+
+    <script>
+        // Show Welcome Alert
+        alert("Welcome to our website!");
+
+        // Prompt for User Name
+        let name = prompt("Enter your name:");
+        if (name) {
+            document.getElementById("greeting").innerText = "Hello, " + name + "!";
+        } else {
+            document.getElementById("greeting").innerText = "You didn't enter a name!";
+        }
+
+        // Confirm Box
+        let confirmAction = confirm("Do you want to proceed?");
+        if (confirmAction) {
+            console.log("User chose to proceed");
+        } else {
+            console.log("User cancelled");
+        }
+    </script>
+</body>
+</html>

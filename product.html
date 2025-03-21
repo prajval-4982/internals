@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product of Two Numbers</title>
+</head>
+<body>
+    <h2>Product Calculator</h2>
+    <input type="number" id="numX" placeholder="Enter first number">
+    <input type="number" id="numY" placeholder="Enter second number">
+    <button onclick="findProduct()">Calculate Product</button>
+    <p id="productResult"></p>
+
+    <script>
+        function findProduct() {
+            let x = parseFloat(document.getElementById("numX").value);
+            let y = parseFloat(document.getElementById("numY").value);
+            let product = x * y;
+            document.getElementById("productResult").innerText = "Product: " + product;
+        }
+    </script>
+</body>
+</html>
