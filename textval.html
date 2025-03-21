@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Validation</title>
+</head>
+<body>
+    <h2>Type "JAVASCRIPT"</h2>
+    <input type="text" id="textInput" oninput="checkInput()" onchange="validateInput()">
+    <span id="status"></span>
+
+    <script>
+        function checkInput() {
+            let text = document.getElementById("textInput").value;
+            document.getElementById("status").innerHTML = text === "JAVASCRIPT" ? "✅" : "";
+        }
+
+        function validateInput() {
+            let text = document.getElementById("textInput").value;
+            document.getElementById("status").innerHTML = text === "JAVASCRIPT" ? "✅" : "❌";
+        }
+    </script>
+</body>
+</html>
